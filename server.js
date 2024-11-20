@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 const host = "0.0.0.0";
-const port = 8080;
+const port = 80;
 
 // Middleware to set required headers for SharedArrayBuffer access
 app.use((req, res, next) => {
