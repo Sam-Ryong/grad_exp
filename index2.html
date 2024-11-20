@@ -1,0 +1,47 @@
+<div>
+  <main class="container">
+    <section>
+      <h2>성능 확인용 페이지</h2>
+
+      <!-- 사용자가 모델 URL을 입력할 수 있도록 수정 -->
+      <label for="model">Model URL:</label>
+      <input
+        type="url"
+        id="model"
+        name="model"
+        placeholder="Enter the model URL"
+        required
+      />
+      <br />
+
+      <textarea id="prompt" name="prompt">
+   What is his Major in university?? </textarea
+      >
+      <br />
+
+      <pre id="result" name="result"></pre>
+    </section>
+    <br />
+    <section>
+      <button id="run">Run</button>
+    </section>
+
+    <section>
+      <button id="run-progress-loading-model" aria-busy="true" hidden="hidden">
+        Loading model...
+      </button>
+      <button id="run-progress-loaded-model" aria-busy="true" hidden="hidden">
+        Loaded model
+      </button>
+      <button id="run-progress-generating" aria-busy="true" hidden="hidden">
+        Generating...
+      </button>
+    </section>
+
+    <section>
+      <progress id="model-progress" hidden="hidden"></progress>
+    </section>
+  </main>
+
+  <script type="module" src="example-multi-thread.js"></script>
+</div>
